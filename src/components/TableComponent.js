@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import data from "./mock-data.json"
+import FormAddSongs from "../components/FormAddSongs"
 
 
 function Table() {
@@ -30,6 +31,8 @@ const [contacts, setcontacts] = useState(data)
           
         </tbody>
       </table>
+      <h2>Add a song</h2>
+     <FormAddSongs/>
     </div>
   );
 }
