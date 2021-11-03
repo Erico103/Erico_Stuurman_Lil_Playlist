@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "song": "Blue moon",
+      "artist": "Elvis Presley",
+      "genre": "Rock",
+      "rating": 8
+    },
+    {
+      "id": 2,
+      "song": "Disco Duck",
+      "artist": "Elvis Presley",
+      "genre": "Rock",
+      "rating": 8
+    },
+    {
+      "id": 3,
+      "song": "We are the champions",
+      "artist": "Queen",
+      "genre": "Rock",
+      "rating": 7
+    },
+    {
+      "id": 4,
+      "song": "Whiter shade of pale",
+      "artist": "Procol Harum",
+      "genre": "Rock",
+      "rating": 7
+    },
+    {
+      "id": 5,
+      "song": "Summer of 69",
+      "artist": "Bryan Adams",
+      "genre": "Rock",
+      "rating": 5
+    }
+    
+  ]
