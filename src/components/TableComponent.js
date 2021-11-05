@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from "react";
 import { nanoid } from "nanoid";
-import "../App.css";
 import data from "./mock-data.json";
- import ReadOnlyRow from "./ReadOnlyRow";
- import EditableRow from "./EditableRow";
+import ReadOnlyRow from "./ReadOnlyRow";
+import EditableRow from "./EditableRow";
+import "../App.css";
 
 const App = () => {
   const [contacts, setContacts] = useState(data);
@@ -23,7 +23,7 @@ const App = () => {
 
   const [editContactId, setEditContactId] = useState(null);
 
-  const handleAddFormChange = (event) => {
+  const handleAddFormChange = event => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute("name");
@@ -35,7 +35,7 @@ const App = () => {
     setAddFormData(newFormData);
   };
 
-  const handleEditFormChange = (event) => {
+  const handleEditFormChange = event => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute("name");
@@ -47,7 +47,7 @@ const App = () => {
     setEditFormData(newFormData);
   };
 
-  const handleAddFormSubmit = (event) => {
+  const handleAddFormSubmit = event => {
     event.preventDefault();
 
     const newContact = {
@@ -62,20 +62,20 @@ const App = () => {
     setContacts(newContacts);
   };
 
-  const handleEditFormSubmit = (event) => {
+  const handleEditFormSubmit = event => {
     event.preventDefault();
 
     const editedContact = {
       id: editContactId,
-     song: editFormData.song,
+      song: editFormData.song,
       artist: editFormData.artist,
       genre: editFormData.genre,
-     rating: editFormData.rating,
+      rating: editFormData.rating,
     };
 
     const newContacts = [...contacts];
 
-    const index = contacts.findIndex((contact) => contact.id === editContactId);
+    const index = contacts.findIndex(contact => contact.id === editContactId);
 
     newContacts[index] = editedContact;
 
@@ -101,10 +101,10 @@ const App = () => {
     setEditContactId(null);
   };
 
-  const handleDeleteClick = (contactId) => {
+  const handleDeleteClick = contactId => {
     const newContacts = [...contacts];
 
-    const index = contacts.findIndex((contact) => contact.id === contactId);
+    const index = contacts.findIndex(contact => contact.id === contactId);
 
     newContacts.splice(index, 1);
 
@@ -125,7 +125,7 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            {contacts.map((contact) => (
+            {contacts.map(contact => (
               <Fragment>
                 {editContactId === contact.id ? (
                   <EditableRow
